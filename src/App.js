@@ -17,13 +17,12 @@ function App() {
         <h1>
           Willkommen bei <span className="highlight">SCRUM WORLD</span>
         </h1>
-
         <div className="buttons">
           <Link to="/theorie" className="btn">📘 Theorie</Link>
           <Link to="/lernkarten" className="btn">🧠 Lernkarten</Link>
           <Link to="/praxisbeispiele" className="btn">🛠️ Praxisbeispiele</Link>
           <Link to="/registrierung" className="btn">📝 Registrierung</Link>
-          <Link to="/level" className="btn">🎯 Level wählen</Link>
+          <Link to="/levelauswahl" className="btn">🎯 Level wählen</Link>
         </div>
 
         <Routes>
@@ -31,7 +30,7 @@ function App() {
           <Route path="/lernkarten" element={<Lernkarten />} />
           <Route path="/praxisbeispiele" element={<Praxisbeispiele />} />
           <Route path="/registrierung" element={<Registrierung />} />
-          <Route path="/level" element={<LevelAuswahl />} />
+          <Route path="/levelauswahl" element={<LevelAuswahl />} />
           <Route path="/fragen/:level" element={<Fragen />} />
         </Routes>
       </div>
