@@ -1,39 +1,49 @@
 .profil-container {
-    max-width: 400px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    text-align: center;
-  }
-  
-  .profil-container h2 {
-    margin-bottom: 20px;
-  }
-  
-  .profil-container input,
-  .profil-container select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-  }
-  
-  .profil-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .profil-container button:hover {
-    background-color: #0056b3;
-  }
-  
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.profil-card {
+  background-color: white;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.profil-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px;
+  object-fit: cover;
+  border: 2px solid #007bff;
+}
+
+.profil-details p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.level-badge {
+  padding: 2px 8px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.level-badge.anfaenger {
+  background-color: green;
+}
+
+.level-badge.fortgeschritten {
+  background-color: orange;
+}
+
+.level-badge.experte {
+  background-color: red;
+}

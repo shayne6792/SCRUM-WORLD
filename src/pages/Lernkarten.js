@@ -2,9 +2,9 @@ import React from 'react';
 
 function Lernkarten() {
   return (
-    <div>
-      <h2>Lernkarten</h2>
-      <p>Hier findest du Lernkarten zum SCRUM-Thema.</p>
+    <div style={{ textAlign: 'center', padding: '30px' }}>
+      <h2 style={{ fontSize: '28px' }}>🧠 Lernkarten</h2>
+      <p>Trainiere dein Wissen mit interaktiven Lernkarten.</p>
     </div>
   );
 }

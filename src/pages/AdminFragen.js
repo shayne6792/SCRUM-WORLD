@@ -6,12 +6,12 @@ function AdminFragen() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  // سؤال وإجابات
   const [frage, setFrage] = useState("");
   const [antworten, setAntworten] = useState(["", "", "", ""]);
   const [korrekteAntwort, setKorrekteAntwort] = useState(0);
   const [level, setLevel] = useState("");
   const [zertifikat, setZertifikat] = useState("");
+  const [quelle, setQuelle] = useState(""); // 🆕 hinzugefügt
 
   const handleAntwortChange = (index, value) => {
     const newAntworten = [...antworten];
@@ -36,15 +36,17 @@ function AdminFragen() {
       korrekteAntwort,
       level,
       zertifikat,
+      quelle, // 🆕 eingefügt
     };
     console.log("Gespeicherte Frage:", neueFrage);
     alert("Frage erfolgreich gespeichert!");
-    // Reset
+
     setFrage("");
     setAntworten(["", "", "", ""]);
     setKorrekteAntwort(0);
     setLevel("");
     setZertifikat("");
+    setQuelle(""); // 🧼 Reset
   };
 
   if (!loggedIn) {
@@ -117,6 +119,14 @@ function AdminFragen() {
           <option value="PSM2">PSM II</option>
           <option value="PSM3">PSM III</option>
         </select>
+
+        {/* 🆕 Quelle-Feld */}
+        <input
+          type="text"
+          placeholder="Quelle"
+          value={quelle}
+          onChange={(e) => setQuelle(e.target.value)}
+        />
 
         <button type="submit">Frage speichern</button>
       </form>

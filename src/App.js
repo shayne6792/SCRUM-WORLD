@@ -1,16 +1,24 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import './App.css';
-import Profil from './pages/Profil';
-import AdminFragen from './pages/AdminFragen';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-import Theorie from './pages/Theorie';
-import Lernkarten from './pages/Lernkarten';
-import Praxisbeispiele from './pages/Praxisbeispiele';
-import Registrierung from './pages/Registrierung';
-import LevelAuswahl from './pages/LevelAuswahl';
-import Fragen from './pages/Fragen';
-import Testergebnisse from './pages/Testergebnisse';
+import Profil from "./pages/Profil";
+import AdminLogin from "./pages/AdminLogin";
+import AdminPanel from "./pages/AdminPanel";
+import AdminFragen from "./pages/AdminFragen";
+import GlossaryInput from "./pages/GlossaryInput";
+import Theorie from "./pages/Theorie";
+import Lernkarten from "./pages/Lernkarten";
+import Praxisbeispiele from "./pages/Praxisbeispiele";
+import Registrierung from "./pages/Registrierung";
+import LevelAuswahl from "./pages/LevelAuswahl";
+import Fragen from "./pages/Fragen";
+import Testergebnisse from "./pages/Testergebnisse";
+import Welcome from './pages/Welcome';
+import Login from './pages/Login';
+
+
+import "./App.css";
+
 function App() {
   return (
     <Router>
@@ -20,34 +28,35 @@ function App() {
           Willkommen bei <span className="highlight">SCRUM WORLD</span>
         </h1>
         <div className="buttons">
-          <Link to="/theorie" className="btn">📘 Theorie</Link>
-          <Link to="/lernkarten" className="btn">🧠 Lernkarten</Link>
-          <Link to="/praxisbeispiele" className="btn">🛠️ Praxisbeispiele</Link>
-          <Link to="/registrierung" className="btn">📝 Registrierung</Link>
-          <Link to="/levelauswahl" className="btn">🎯 Level wählen</Link>
-          <Link to="/profil" className="profile-button">👤 Profil</Link>
-          <Link to="/adminfragen" className="admin-button">🛠️</Link>
+          <Link to="/theorie" className="btn">📘 Glossary</Link>
+          <Link to="/lernkarten" className="btn">💖 Lernkarten</Link>
+          <Link to="/praxisbeispiele" className="btn">🛠 Praxisbeispiele</Link>
+          <Link to="/registrierung" className="btn">📋 Registrierung</Link>
+          <Link to="/levelauswahl" className="btn">🧠 Tests</Link>
           <Link to="/testergebnisse" className="btn">📊 Ergebnisse</Link>
-
-
-
-
-
-
         </div>
+        <Link to="/login" className="profile-button">👤</Link>
+
+        <Link to="/admin" className="admin-button">⚙️</Link>
 
         <Routes>
+          <Route path="/profil" element={<Profil />} />
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/adminpanel" element={<AdminPanel />} />
+          <Route path="/adminfragen" element={<AdminFragen />} />
+          <Route path="/glossaryinput" element={<GlossaryInput />} />
           <Route path="/theorie" element={<Theorie />} />
           <Route path="/lernkarten" element={<Lernkarten />} />
           <Route path="/praxisbeispiele" element={<Praxisbeispiele />} />
           <Route path="/registrierung" element={<Registrierung />} />
           <Route path="/levelauswahl" element={<LevelAuswahl />} />
+          <Route path="/welcome" element={<Welcome />} />
+
+          {/* ✅ التعديل هنا */}
           <Route path="/fragen/:level" element={<Fragen />} />
-          <Route path="/profil" element={<Profil />} />
-          <Route path="/adminfragen" element={<AdminFragen />} />
+
           <Route path="/testergebnisse" element={<Testergebnisse />} />
-
-
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>

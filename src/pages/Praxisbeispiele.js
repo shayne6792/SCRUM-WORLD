@@ -2,9 +2,9 @@ import React from 'react';
 
 function Praxisbeispiele() {
   return (
-    <div>
-      <h2>Praxisbeispiele</h2>
-      <p>Hier findest du echte Beispiele aus der Praxis.</p>
+    <div style={{ textAlign: 'center', padding: '30px' }}>
+      <h2 style={{ fontSize: '28px' }}>🛠 Praxisbeispiele</h2>
+      <p>Hier kannst du sehen, wie Scrum in der Praxis funktioniert.</p>
     </div>
   );
 }
