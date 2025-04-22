@@ -1,0 +1,9 @@
+/* src/pages/Welcome.css */
+.welcome-container {
+    text-align: center;
+    padding: 50px;
+  }
+  .welcome-container .buttons {
+    margin-top: 30px;
+  }
+  

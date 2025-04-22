@@ -1,3 +1,4 @@
+// src/App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
@@ -28,56 +29,38 @@ function App() {
         </h1>
 
         <div className="buttons">
-          <Link to="/theorie" className="btn">
-            📘 Glossary
-          </Link>
-          <Link to="/lernkarten" className="btn">
-            💖 Lernkarten
-          </Link>
-          <Link to="/praxisbeispiele" className="btn">
-            🛠 Praxisbeispiele
-          </Link>
-          <Link to="/registrierung" className="btn">
-            📋 Registrierung
-          </Link>
-          <Link to="/levelauswahl" className="btn">
-            🧠 Tests
-          </Link>
-          <Link to="/testergebnisse" className="btn">
-            📊 Ergebnisse
-          </Link>
+          <Link to="/theorie" className="btn">📘 Glossary</Link>
+          <Link to="/lernkarten" className="btn">💖 Lernkarten</Link>
+          <Link to="/praxisbeispiele" className="btn">🛠 Praxisbeispiele</Link>
+          <Link to="/registrierung" className="btn">📋 Registrierung</Link>
+          <Link to="/levelauswahl" className="btn">🧠 Tests</Link>
+          <Link to="/testergebnisse" className="btn">📊 Ergebnisse</Link>
         </div>
 
         <Link to="/login" className="profile-button">👤</Link>
         <Link to="/admin" className="admin-button">⚙️</Link>
 
         <Routes>
-          {/* Home */}
-          <Route path="/" element={<Welcome />} />
-
           {/* Hauptseiten */}
-          <Route path="/theorie" element={<Theorie />} />
-          <Route path="/lernkarten" element={<Lernkarten />} />
-          <Route path="/praxisbeispiele" element={<Praxisbeispiele />} />
-          <Route path="/registrierung" element={<Registrierung />} />
-          <Route path="/levelauswahl" element={<LevelAuswahl />} />
-          <Route path="/testergebnisse" element={<Testergebnisse />} />
-
-          {/* Dynamische Fragen pro Level */}
-          <Route path="/fragen/:level" element={<Fragen />} />
-
-          {/* User & Admin */}
-          <Route path="/login" element={<Login />} />
           <Route path="/profil" element={<Profil />} />
           <Route path="/admin" element={<AdminLogin />} />
           <Route path="/adminpanel" element={<AdminPanel />} />
           <Route path="/adminfragen" element={<AdminFragen />} />
           <Route path="/glossaryinput" element={<GlossaryInput />} />
+          <Route path="/theorie" element={<Theorie />} />
+          <Route path="/lernkarten" element={<Lernkarten />} />
+          <Route path="/praxisbeispiele" element={<Praxisbeispiele />} />
+          <Route path="/registrierung" element={<Registrierung />} />
+          <Route path="/levelauswahl" element={<LevelAuswahl />} />
+          <Route path="/welcome" element={<Welcome />} />
+          <Route path="/fragen/:level" element={<Fragen />} />
+          <Route path="/testergebnisse" element={<Testergebnisse />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
 
         {/* Footer auf allen Seiten */}
         <footer className="footer">
-          © {new Date().getFullYear()} Scrum World. All rights reserved.
+          © {new Date().getFullYear()} Scrum World. All rights reserved.
         </footer>
       </div>
     </Router>
