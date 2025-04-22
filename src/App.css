@@ -18,21 +18,22 @@
   margin: 20px 0;
 }
 
+/* Wichtig: .btn unbedingt mit !important, damit es überall greift */
 .btn {
-  margin: 5px;
-  padding: 8px 14px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  transition: background-color 0.2s;
+  margin: 5px !important;
+  padding: 8px 14px !important;
+  background-color: #007bff !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 6px !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  font-weight: bold !important;
+  transition: background-color 0.2s !important;
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #0056b3 !important;
 }
 
 .profile-button,
@@ -45,6 +46,10 @@
   font-size: 12px;
   font-weight: bold;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
 .profile-button {
@@ -54,18 +59,40 @@
 
 .admin-button {
   top: 70px;
-  background-color: #28a745;
-}
-.admin-page {
-  margin-top: 30px;
+  background-color: green;
 }
 
-.admin-links {
+.login-container {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
+  justify-content: center;
+  margin-top: 60px;
 }
+
+.login-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 300px;
+}
+
+.login-box input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.login-box button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
 .admin-login-container {
   display: flex;
   justify-content: center;
@@ -117,69 +144,6 @@
   font-weight: bold;
   cursor: pointer;
 }
-.profile-button,
-.admin-button {
-  position: fixed;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  z-index: 1000;
-}
-
-.profile-button {
-  top: 20px;
-  right: 20px;
-  background-color: #007bff;
-}
-
-.admin-button {
-  top: 70px;
-  right: 20px;
-  background-color: green;
-}
-
-.login-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 60px;
-}
-
-.login-box {
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  text-align: center;
-  width: 300px;
-}
-
-.login-box input {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-}
-
-.login-box button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  border-radius: 5px;
-}
-
-.admin-panel {
-  text-align: center;
-  margin-top: 30px;
-}
 
 .admin-links {
   display: flex;
@@ -187,6 +151,7 @@
   gap: 15px;
   margin-top: 20px;
 }
+
 .question-list {
   list-style: none;
   padding: 0;
